@@ -27,9 +27,9 @@ pipeline {
         }
         stage('Approval for Production') {
             steps {
-                
+                script {
                     input message: 'Approve deployment to production?', ok: 'Proceed'
-                
+                }
             }
         }
         stage('Deploy to Production') {
